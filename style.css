@@ -1,0 +1,46 @@
+/* Styl dla paska nawigacyjnego */
+ul {
+    list-style-type: none; /* Usuń wypunktowanie */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ustawienie elementów w jednej linii */
+    justify-content: flex-start; /* Wyrównanie elementów do lewej */
+    background-color: #333; /* Ciemny kolor tła nawigacji */
+}
+
+ul li {
+    display: inline; /* Elementy w jednej linii */
+}
+
+ul li a {
+    display: block;
+    color: white; /* Białe litery */
+    text-align: center;
+    padding: 14px 20px; /* Odstępy między linkami */
+    text-decoration: none; /* Usuń podkreślenie */
+}
+
+ul li a:hover {
+    background-color: #575757; /* Efekt podświetlenia po najechaniu */
+}
+
+/* Styl dla sekcji treści */
+#Content {
+    padding: 20px;
+    font-size: 16px;
+    color: #333; /* Tekst w kolorze ciemnoszarym */
+}
+
+/* Styl dla stopki */
+footer {
+    background-color: #333; /* Czarne tło */
+    color: white; /* Białe litery */
+    text-align: center; /* Tekst wyśrodkowany */
+    padding: 20px 0; /* Odstępy w pionie */
+    font-size: 14px; /* Rozmiar tekstu */
+}
+
+footer h2 {
+    margin: 0; /* Usuń margines */
+    font-size: 16px; /* Rozmiar czcionki */
+}
