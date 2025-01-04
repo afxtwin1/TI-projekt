@@ -37,6 +37,7 @@ ul li a:hover {
 
 /* Styl dla sekcji treści */
 #Content {
+    font-family: 'Roboto', sans-serif;
     flex: 1;
     padding: 20px;
     font-size: 16px;
@@ -56,4 +57,28 @@ footer {
 footer h2 {
     margin: 0; /* Usuń margines */
     font-size: 16px; /* Rozmiar czcionki */
+}
+/* Formularz nawigacyjny */
+form {
+    display: flex;
+    gap: 10px; /* Odstępy między elementami formularza */
+    align-items: center; /* Wyrównanie elementów w pionie */
+    margin-top: 9px;
+    margin-left: auto; /* Wypycha formularz na prawą stronę */
+}
+
+form input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #575757;
+    color: white;
+    cursor: pointer;
 }
