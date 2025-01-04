@@ -1,4 +1,12 @@
 /* Styl dla paska nawigacyjnego */
+html, body {
+    height: 100%; /* Strona zajmuje 100% wysokości okna przeglądarki */
+    margin: 0; /* Usuń domyślne marginesy */
+    display: flex;
+    flex-direction: column; /* Elementy są układane w kolumnie */
+
+
+
 ul {
     list-style-type: none; /* Usuń wypunktowanie */
     margin: 0;
@@ -26,6 +34,7 @@ ul li a:hover {
 
 /* Styl dla sekcji treści */
 #Content {
+    flex: 1;
     padding: 20px;
     font-size: 16px;
     color: #333; /* Tekst w kolorze ciemnoszarym */
