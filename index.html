@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detailing mobilny</title>
+    <title>Detailing Mobilny</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,17 +12,30 @@
         <li><a href="uslugi.html">Usługi</a></li>
         <li><a href="uslugi_plus.html">Usługi+</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
+        <!-- Formularz logowania na pasku nawigacyjnym -->
+        <li style="margin-left: auto;">
+            <form action="#" method="POST" style="display: flex; gap: 10px; align-items: center;">
+                <label for="email" style="color: white;">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz e-mail" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                
+                <label for="password" style="color: white;">Hasło:</label>
+                <input type="password" id="password" name="password" placeholder="Wpisz hasło" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                
+                <button type="submit" style="padding: 5px 10px; border: none; border-radius: 5px; background-color: #575757; color: white; cursor: pointer;">
+                    Zaloguj
+                </button>
+            </form>
+        </li>
     </ul>
 
     <!-- Główna treść strony -->
     <div id="Content">
-        <!-- Tutaj można umieścić treść strony -->
-        <p>Witamy w naszej księgarni!</p>
+        <p>Detailing mobilny</p>
     </div>
 
     <!-- Stopka -->
     <footer>
-        <h2>detailing mobilny TOP</h2>
+        <h2>Detailing Mobilny TOP</h2>
     </footer>
 </body>
 </html>
