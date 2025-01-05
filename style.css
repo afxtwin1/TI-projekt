@@ -5,7 +5,9 @@ html, body {
     height: 100%; /* Strona zajmuje 100% wysokości okna przeglądarki */
     margin: 0; /* Usuń domyślne marginesy */
     display: flex;
-    flex-direction: column; /* Elementy są układane w kolumnie */
+    flex-direction: column; /* Elementy są układane w kolumnie */;
+    font-size: 25px;
+}
 
 
 
@@ -38,10 +40,25 @@ ul li a:hover {
 /* Styl dla sekcji treści */
 #Content {
     font-family: 'Roboto', sans-serif;
-    flex: 1;
-    padding: 20px;
-    font-size: 16px;
-    color: #333; /* Tekst w kolorze ciemnoszarym */
+    text-align: center;
+    flex: 5;
+    padding: 30px;
+    font-size: 25px;
+    color:  #ffffffcb;
+    background-color: #000000;
+    font-weight: bold;/*pogrubienie tekstu*/
+}
+#team{/*to jest do zdjecia zalozycieli*/
+    float: left;
+    margin-right: 20px;
+}
+#o_firmie{ text-align: center;/*to jest do tekstu*/
+
+}
+#slowka{/*to jest do poszczegolnych slow w teksie o firmie */
+    font-size: 28;
+    color:rgb(248, 0, 0)
+
 }
 
 /* Styl dla stopki */
@@ -50,13 +67,14 @@ footer {
     background-color: #333; /* Czarne tło */
     color: white; /* Białe litery */
     text-align: center; /* Tekst wyśrodkowany */
-    padding: 20px 0; /* Odstępy w pionie */
-    font-size: 14px; /* Rozmiar tekstu */
+    padding: 15px 0; /* Odstępy w pionie */
+    font-size: 20px; /* Rozmiar tekstu */
 }
 
 footer h2 {
     margin: 0; /* Usuń margines */
-    font-size: 16px; /* Rozmiar czcionki */
+    font-size: 30px; /* Rozmiar czcionki */
+    color: rgb(255, 255, 255);
 }
 /* Formularz nawigacyjny */
 form {
@@ -80,5 +98,4 @@ form button {
     border-radius: 5px;
     background-color: #575757;
     color: white;
-    cursor: pointer;
-}
+    cursor: pointer;}
