@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <!-- Pasek nawigacyjny -->
-    <ul>
+    <ul id="navbar">
+        <li><a href="index.html">Strona główna</a></li>
         <li><a href="uslugi.html">Usługi</a></li>
-        <li><a href="uslugi_plus.html">Usługi+</a></li>
+        <li><a href="uslugi_plus.html" id="servicesPlusLink">Usługi+</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
         <!-- Formularz logowania na pasku nawigacyjnym -->
-        <li style="margin-left: auto;">
-            <form action="#" method="POST" style="display: flex; gap: 10px; align-items: center;">
+        <li style="margin-left: auto;" id="login-section">
+            <form id="loginForm" action="#" method="POST" style="display: flex; gap: 10px; align-items: center;">
                 <label for="email" style="color: white;">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Wpisz e-mail" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                <input type="email" id="email" name="email" placeholder="Wpisz e-mail" required style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
                 
                 <label for="password" style="color: white;">Hasło:</label>
-                <input type="password" id="password" name="password" placeholder="Wpisz hasło" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                <input type="password" id="password" name="password" placeholder="Wpisz hasło" required style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
                 
                 <button type="submit" style="padding: 5px 10px; border: none; border-radius: 5px; background-color: #575757; color: white; cursor: pointer;">
                     Zaloguj
@@ -30,12 +32,94 @@
 
     <!-- Główna treść strony -->
     <div id="Content">
-        <p>Detailing mobilny</p>
+        <img src="bnk logo.png" style="width: 400px; height: 200px"> 
+        <br>
+        <br> 
+        <p id="team"> <img src="bnk team.png" style="width: 650px; height: 800px"></p> <br> <br>
+        <p id="o_firmie">Firma <span id="slowka">BNK Detailing</span> została założona przez trzech przyjaciół, Bruno, Nikodema i Kacpra, którzy od zawsze pasjonowali się samochodami i nowoczesnymi technologiami.
+             Głównym celem działalności jest oferowanie usług detailingu samochodowego, które można zamawiać całkowicie online.
+              Klienci nie muszą kontaktować się z mechanikami ani odwiedzać warsztatów, aby skorzystać z oferty. 
+              Proces zamawiania usług został maksymalnie uproszczony, co czyni firmę prawdziwą innowacją na rynku motoryzacyjnym.
+             <span id="slowka">BNK Detailing</span> posiada sieć warsztatów w których profesjonaliści wykonują detailing na najwyższym poziomie. Wszystkie zamówienia są realizowane zgodnie z wytycznymi klienta, które można podać na stronie internetowej. To idealne rozwiązanie dla osób zapracowanych, które nie mają czasu na długie wizyty w warsztatach.
+              Strona internetowa firmy oferuje również unikalną funkcję projektowania nowego wyglądu auta.  Po zamówieniu usługi +  klienci dostają maila gdzie wpisują model i kolor swojego samochodu, a sztuczna inteligencja tworzy propozycje nowych designów wraz z indywidualną ceną . Dzięki temu każdy użytkownik może zyskać niepowtarzalny wygląd swojego pojazdu, dostosowany do swoich preferencji.
+              Klienci doceniają możliwość załatwienia wszystkich formalności online, bez potrzeby osobistego kontaktu. Usługi firmy wyróżniają się wysoką jakością oraz szybkością realizacji zamówień. Współpraca założycieli, oparta na wspólnej pasji i przyjaźni, sprawia, że firma nieustannie się rozwija i zdobywa coraz większe zaufanie klientów.<br><br>
+             <span id="slowka">BNK Detailing </span> to gwarancja profesjonalizmu, nowoczesności i wyjątkowego podejścia do potrzeb każdego kierowcy.
+        
+        </p>
     </div>
 
     <!-- Stopka -->
     <footer>
-        <h2>Detailing Mobilny TOP</h2>
+        <h2>
+        BNK Detailing
+        
+        </h2>
     </footer>
+
+    <!-- Skrypt JavaScript -->
+    <script>
+        let isLoggedIn = false; // Flaga logowania
+
+        const loginForm = document.getElementById('loginForm');
+        const loginSection = document.getElementById('login-section');
+        const servicesPlusLink = document.getElementById('servicesPlusLink');
+
+        // Blokowanie linku "Usługi+" dla niezalogowanych użytkowników
+        servicesPlusLink.addEventListener('click', function(event) {
+            if (!isLoggedIn) {
+                event.preventDefault(); // Zatrzymuje przejście do linku
+                alert('Musisz być zalogowany, aby korzystać z tej funkcji!');
+            }
+        });
+
+        // Obsługa logowania
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Zapobiega domyślnemu przesłaniu formularza
+
+            isLoggedIn = true; // Użytkownik jest teraz zalogowany
+
+            // Zmieniamy treść sekcji logowania na "Jesteś zalogowany"
+            loginSection.innerHTML = `
+                <span style="color: white;">Jesteś zalogowany!</span>
+                <button onclick="logout()" style="padding: 20px 30px; margin-left: 10px; border: none; border-radius: 5px; background-color: #d32f2f; color: white; cursor: pointer;">
+                    Wyloguj
+                </button>
+            `;
+        });
+
+        // Obsługa wylogowania
+        function logout() {
+            isLoggedIn = false; // Resetowanie flagi logowania
+
+            // Przywracamy formularz logowania
+            loginSection.innerHTML = `
+                <form id="loginForm" action="#" method="POST" style="display: flex; gap: 10px; align-items: center;">
+                    <label for="email" style="color: white;">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Wpisz e-mail" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                    
+                    <label for="password" style="color: white;">Hasło:</label>
+                    <input type="password" id="password" name="password" placeholder="Wpisz hasło" required style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+                    
+                    <button type="submit" style="padding: 5px 10px; border: none; border-radius: 5px; background-color: #575757; color: white; cursor: pointer;">
+                        Zaloguj
+                    </button>
+                </form>
+            `;
+
+            // Dodajemy ponownie zdarzenie do nowego formularza
+            const newLoginForm = document.getElementById('loginForm');
+            newLoginForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                isLoggedIn = true; // Użytkownik jest teraz zalogowany
+
+                loginSection.innerHTML = `
+                    <span style="color: white;">Jesteś zalogowany!</span>
+                    <button onclick="logout()" style="padding: 5px 10px; margin-left: 10px; border: none; border-radius: 5px; background-color: #d32f2f; color: white; cursor: pointer;">
+                        Wyloguj
+                    </button>
+                `;
+            });
+        }
+    </script>
 </body>
 </html>
