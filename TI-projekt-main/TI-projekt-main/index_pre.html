@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailing Mobilny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pasek nawigacyjny -->
+    <ul id="navbar">
+        <li><a href="index_pre.html">Strona główna</a></li>
+        <li><a href="uslugi.html">Usługi</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <!-- Formularz logowania na pasku nawigacyjnym -->
+        <li style="margin-left: auto;" id="login-section">
+            <a href="koszyk.html" id="koszyk"><img src="shopping-cart.png"></a>
+            <form id="loginForm" action="#" method="POST">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz e-mail" required>
+                
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" placeholder="Wpisz hasło" required>
+                
+                <button type="submit">Zaloguj</button>
+            </form>
+        </li>
+    </ul>
+
+    <!-- Główna treść strony -->
+    <div id="Content">
+        <img src="bnk_logo_transparent.png" class="logo">
+        <br><br>
+        <p id="team">
+            <img src="bnk team.png" class="team-photo">
+        </p>
+        <br><br>
+        <p id="o_firmie">
+            Firma <span id="slowka">BNK Detailing</span> została założona przez trzech przyjaciół, Bruno, Nikodema i Kacpra, którzy od zawsze pasjonowali się samochodami i nowoczesnymi technologiami.
+            Głównym celem działalności jest oferowanie usług detailingu samochodowego, które można zamawiać całkowicie online.
+            Klienci nie muszą kontaktować się z mechanikami ani odwiedzać warsztatów, aby skorzystać z oferty.
+        </p>
+    </div>
+
+    <footer>
+        <h2>BNK Detailing</h2>
+    </footer>
+
+    <!-- Odwołanie do zewnętrznego pliku JavaScript -->
+    <script src="javascript.js"></script>
+</body>
+</html>
