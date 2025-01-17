@@ -1,7 +1,30 @@
-<html>
-    <header>
-        Kontakt
-    </header>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailing Mobilny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul id="navbar">
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="uslugi.html">Usługi</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <!-- Formularz logowania na pasku nawigacyjnym -->
+        <li style="margin-left: auto;" id="login-section">
+            <a href="koszyk.html" id="koszyk"><img src="shopping-cart.png"></a>
+            <form id="loginForm" action="#" method="POST">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz e-mail" required>
+                
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" placeholder="Wpisz hasło" required>
+                
+                <button type="submit">Zaloguj</button>
+            </form>
+        </li>
+    </ul>
     <form>
     E-mail:  <input type="week" name="guest_email" required="required"/> <br><br>
     Login:  <input type="text" name="guest_login" required="required"/><br><br>
@@ -18,4 +41,12 @@
     <textarea name="text_opinion" placeholder="napisz cos wiecej"></textarea>
     <input type="submit" value="Wyslij"/>
     </form>
+    <footer>
+        <h2>BNK Detailing</h2>
+    </footer>
+
+    <!-- Odwołanie do zewnętrznego pliku JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>
+
