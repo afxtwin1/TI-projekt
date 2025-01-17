@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loginForm.addEventListener('submit', function (event) {
             event.preventDefault();
             // Po zalogowaniu przekieruj do index.html
-            window.location.href = 'index.html';
+            window.location.href = 'index_post.html';
         });
     }
 });
