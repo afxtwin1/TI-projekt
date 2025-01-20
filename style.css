@@ -9,6 +9,7 @@ html, body {
     flex-direction: column;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 247, 234);
 }
 
 ul {
