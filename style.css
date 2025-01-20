@@ -171,3 +171,112 @@ footer h2 {
     margin: 0;
 }
 
+
+
+/*Koszyk ogólnie*/
+
+/* Stylizacja nagłówka */
+#cart-items h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Siatka koszyka */
+.cart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+/* Stylizacja elementów koszyka */
+.cart-item {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-image {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cart-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.remove-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #e84141;
+}
+
+/* Stylizacja przycisku "Zapłać" */
+.checkout-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+/* Efekt powiększenia obrazka w koszyku */
+.cart-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-image {
+    transition: transform 0.3s ease;
+}
+
+.cart-item:hover .cart-image {
+    transform: scale(1.2);
+}
+
+/* Stylizacja dla pustego koszyka */
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Środek widoku */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #888;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+

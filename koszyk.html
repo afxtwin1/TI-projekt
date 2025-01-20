@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detailing Mobilny</title>
+    <title>Koszyk</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,11 +20,16 @@
         </li>
     </ul>
 
+    <!-- Miejsce na koszyk -->
+    <div id="cart-items"></div>
+
     <footer>
         <h2>BNK Detailing</h2>
     </footer>
 
-    <!-- Odwołanie do zewnętrznego pliku JavaScript test test-->
-    <script src="script.js"></script>
+    <script src="javascript.js"></script>
+    <script>
+        displayCart();
+    </script>
 </body>
 </html>
