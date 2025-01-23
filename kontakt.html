@@ -6,7 +6,9 @@
     <title>Detailing Mobilny</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="tlo">
+    
+    
     <ul id="navbar">
         <li><a href="index.html">Strona główna</a></li>
         <li><a href="uslugi.html">Usługi</a></li>
@@ -16,29 +18,49 @@
         </li>
         </li>
     </ul>
-    <form>
-    E-mail:  <input type="week" name="guest_email" required="required"/> <br><br>
-    Login:  <input type="text" name="guest_login" required="required"/><br><br>
-    Autor:  <input type="text" name="autor" required="required"/><br><br>
-    Tytuł:  <input type="text" name="tytuł" required="required"/><br><br>
+    <div id="kontakt">
+
+    
+     <h1>Kontakt</h1>
+        <form action="/submit" method="post">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" id="name" name="name" placeholder="Wpisz swoje imię i nazwisko" required>
+    
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Wpisz swój adres e-mail" required>
+    
+            <label for="phone">Numer telefonu:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Wpisz swój numer telefonu">
+    
+            <label for="subject">Temat wiadomości:</label>
+            <input type="text" id="subject" name="subject" placeholder="Wpisz temat wiadomości" required>
+
+            <label>Oceń Stronę:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="rank" value="1" /> 1</label>
+                <label><input type="radio" name="rank" value="2" /> 2</label>
+                <label><input type="radio" name="rank" value="3" /> 3</label>
+                <label><input type="radio" name="rank" value="4" /> 4</label>
+                <label><input type="radio" name="rank" value="5" /> 5</label>
+            </div>
+
+                <label for="text_opinion">Dodatkowe uwagi:</label>
+                <textarea id="text_opinion" name="text_opinion" placeholder="Napisz coś więcej"></textarea>
+
+                <button type="button">Wyślij</button>
                 
-    Oceń Strone:
-                <input type="radio" name="rank" value="1"/>1
-                <input type="radio" name="rank" value="2"/>2
-                <input type="radio" name="rank" value="3"/>3
-                <input type="radio" name="rank" value="4"/>4
-                <input type="radio" name="rank" value="5"/>5
-    </br>
-    <textarea name="text_opinion" placeholder="napisz cos wiecej"></textarea>
-    <input type="submit" value="Wyslij"/>
-    </form>
+        </form>
+    
+    </div>
     <footer>
         <h2>BNK Detailing</h2>
     </footer>
 
     <!-- Odwołanie do zewnętrznego pliku JavaScript -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
 
 <!--testowy komentarz-->
