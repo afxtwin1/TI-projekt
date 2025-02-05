@@ -4,9 +4,31 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loginForm) {
         loginForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            // Po zalogowaniu przekieruj do index_post.html
-            window.location.href = 'index_post.html';
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                let users = JSON.parse(localStorage.getItem('users')) || [];
+                users.push({ email, password });
+                localStorage.setItem('users', JSON.stringify(users));
+
+                console.log("Dodano użytkownika:", { email, password });
+                console.log("Lista użytkowników:", users);
+
+                loginForm.reset();
+                window.location.href = 'index_post.html';
+            }
         });
+    }
+
+    // 📌 AUTOMATYCZNE WYŚWIETLANIE UŻYTKOWNIKÓW W KONSOLI
+    let savedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    if (savedUsers.length > 0) {
+        console.log("📌 Lista zapisanych użytkowników:");
+        console.table(savedUsers);  // Ładne wyświetlanie w tabeli
+    } else {
+        console.log("📌 Brak zapisanych użytkowników.");
     }
 });
 

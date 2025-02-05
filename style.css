@@ -281,81 +281,77 @@ footer h2 {
 }
 
 
-#kontakt{
-    
-   
-    h1 {
-        text-align: center;
-        margin-bottom: 100px;
-        background-color: rgb(255, 247, 234);
-        
-        
-    }
-
-    form {
-        max-width: 400px;
-        width: 50%;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        background-color: #5a5a5aa6;
-        box-shadow: 0 4px 6px rg;/* Kluczowe poprawki */
-        display: flex; /* Flexbox dla formularza */
-        flex-direction: column; /* Układ w pionie */
-        justify-content: center; /* Centrowanie elementów w pionie */
-        align-items: center; /* Centrowanie elementów w poziomie */
-        margin: auto; /* Centrowanie poziome */
-        position: absolute; /* Pozycjonowanie w stosunku do całej strony */
-        top: 50%; /* Pozycjonowanie w pionie */
-        left: 50%; /* Pozycjonowanie w poziomie */
-        transform: translate(-50%, -50%); /* Przesunięcie środka formularza na środek strony */
-        color:#000000;
-        
-    }
-
-    label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-       
-    }
-
-    button {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        background-color: #007BFF;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
-    .radio-group {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 20px;
-    }
+#kontakt {
+    text-align: center;
+    padding: 20px;
 }
-#tlo{
+
+#kontakt h1 {
+    margin-bottom: 20px; /* Mniejszy odstęp, aby napis był widoczny */
+    background-color: transparent; /* Usunięcie tła dla lepszej czytelności */
+}
+
+#kontakt form {
+    max-width: 400px;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(90, 90, 90, 0.65); /* Lekko przezroczyste tło */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px auto 0; /* Dodanie odstępu od napisu "Kontakt" */
+    position: relative; /* Zamiast absolute, aby nie zasłaniać tekstu */
+    color: #000000;
+}
+
+#kontakt label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#kontakt input, 
+#kontakt textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#kontakt button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#kontakt button:hover {
+    background-color: #0056b3;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tlo {
     background-color: rgb(255, 247, 234);
 }
